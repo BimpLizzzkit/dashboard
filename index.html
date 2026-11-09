@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Конструктор дашборда</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="layout">
+  <h1 class="sr-only">Конструктор дашборда</h1>
+
+  <aside id="panel" class="panel" aria-label="Управление дашбордом">
+    <button id="add" class="btn primary">Добавить виджет</button>
+    <button id="reset" class="btn">Сбросить дашборд</button>
+    <button id="theme" class="btn" role="switch" aria-checked="false">Тёмная тема</button>
+    <p id="count" aria-live="polite"></p>
+  </aside>
+
+  <div class="board">
+    <div id="grid" class="grid"></div>
+    <section id="empty" class="empty" hidden>
+      <h2>Здесь пока пусто</h2>
+      <p>Добавьте первый виджет: заметку, счётчик, список задач или график.</p>
+      <button id="add2" class="btn primary">Добавить виджет</button>
+    </section>
+  </div>
+</main>
+<div id="toasts" aria-live="polite"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
